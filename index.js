@@ -363,8 +363,9 @@ let libros=
           dimensiones: "15 3 22", 
           peso: "300" 
       }
+      console.log(libros)
       libros.push(newbook)
-      console.log(libros);
+      libros.pop(libros);
     
     
     
