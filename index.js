@@ -347,36 +347,24 @@ let libros=[
         
    
      newbook={
-      titulo: "El Gran Gatsby",
-      autor: "F. Scott Fitzgerald",
-      genero: "Novela",
-      idioma: "Español",
-      precio: "22.99",
-      formato: "Tapa dura",
-      isbn: "9788432240357",
-      descripcion: "La historia del millonario Jay Gatsby y su vida de lujos y excesos.",
-      estado: "Nuevo",
-      ubicacion: "Librería Mágica",
-      fecha_publicacion: "10 de abril de 1925",
-      editorial: "Debolsillo",
-      paginas: "160",
-      dimensiones: "15 3 22", 
-      peso: "300" 
+      titulo: prompt("titulo"),
+      autor: prompt("titulo"),
+      genero: prompt("titulo"),
+      idioma: prompt("titulo"),
+      precio: prompt("titulo"),
+      formato: prompt("titulo"),
+      isbn: prompt("titulo"),
+      descripcion: prompt("titulo"),
+      estado: prompt("titulo"),
+      ubicacion: prompt("titulo"),
+      fecha_publicacion: prompt("titulo"),
+      editorial: prompt("titulo"),
+      paginas: prompt("titulo"),
+      dimensiones: prompt("titulo"), 
+      peso:prompt("titulo") 
   }
   libros.push(newbook)
-  libros.pop(libros)
+console.log(libros)
   
 
 
-
-
-menuLibros="MENU LIBROS\n\n";
-menuLibros+="1. salir\n";
-menuLibros+="2. mostrar libros \n";
-mostar=parseInt(prompt(menuLibros))
-switch(mostar){
-  case 1: console.log("salir")
-  break
-  case 2: libros.forEach((libros,index) => console.log(libros.titulo));
-        
-}
