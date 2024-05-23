@@ -7,7 +7,7 @@ let libros=[
            precio: "Depende del vendedor y la edición",
            formato: "Puede estar disponible en tapa dura, tapa blanda y ebook, entre otros",
            ISBN: "ISBN para la edición en español es: 9788490431604",
-           Descripcion: "Es una novela corta que narra la historia de un joven príncipe que viaja por diferentes planetas",
+           descripcion: "Es una novela corta que narra la historia de un joven príncipe que viaja por diferentes planetas",
            estado: "nuevo",
            ubicacion: "Disponible en librerías físicas y tiendas en línea",
            fechadepublicacion: "Originalmente publicado en 1943",
@@ -25,7 +25,7 @@ let libros=[
                precio: "Depende del vendedor y la edición",
                formato: "Disponible en tapa dura, tapa blanda y ebook, entre otros",
                ISBN: " ISBN para la edición en español es: 978-84-376-0494-7",
-               Descripcion: "Es una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo.",
+               descripcion: "Es una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo.",
                estado: "Nuevo",
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechadepublicacion: "Originalmente publicado en 1967",
@@ -269,7 +269,7 @@ let libros=[
                estado: "Nuevo",
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1953",
-               editorial: "Varias editoriales han publicado ediciones, como Debolsillo",
+               editorial:  "Alianza",
                paginas: "Varía según la edición, generalmente alrededor de 250 páginas",
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
@@ -281,12 +281,12 @@ let libros=[
                idioma: "Español",
                precio: "Variable según la edición y vendedor",
                formato: "Tapa blanda",
-               isbn: "9780007115617",
+               ISBN: "9780007115617",
                descripcion: "Cuatro niños descubren un mundo mágico detrás de un armario en una casa de campo.",
                estado: "Nuevo",
                ubicacion: "Librería Lewis",
-               fecha_publicacioo: "16 de octubre de 1950",
-               editorial: "HarperCollins",
+               fechaDePublicacion: "16 de octubre de 1950",
+               editorial:  "Alianza",
                paginas: "Varía según la edición, generalmente alrededor de 208 páginas",
                dimensiones: "Depende del formato", 
                peso: "Depende del formato"
@@ -299,12 +299,12 @@ let libros=[
                idioma: "Español",
                precio: "Variable según la edición y vendedor",
                formato: "Tapa blanda",
-               isbn: "9788491040541",
+               ISBN: "9788491040541",
                descripcion: "La compleja historia de amor entre Elizabeth Bennet y Mr. Darcy en la Inglaterra del siglo XIX.",
                estado: "Nuevo",
                ubicacion: "Librería Austen",
-               fecha_publicacioo: "28 de enero de 1813",
-               editorial: "Alba Editorial",
+               fechaDePublicacion: "28 de enero de 1813",
+               editorial:  "Alianza",
                paginas:"Varía según la edición, generalmente alrededor de 420 páginas",
                dimensiones: "Depende del formato", 
                peso:  "Depende del formato"
@@ -316,11 +316,11 @@ let libros=[
                idioma: "Español",
                precio: "Variable según la edición y vendedor",
                formato: "Tapa dura",
-               isbn: "9788499084565",
+               ISBN: "9788499084565",
                descripcion: "La historia de un viaje en un submarino a través de los mares del mundo.",
                estado: "Nuevo",
                ubicacion: "Librería Mágica",
-               fecha_publicacioo: "20 de marzo de 1870",
+               fechaDePublicacion: "20 de marzo de 1870",
                editorial: "Alianza",
                paginas: "Varía según la edición, generalmente alrededor de 240 páginas",
                dimensiones:"Depende del formato", 
@@ -337,7 +337,7 @@ let libros=[
                descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa.",
                estado: "Nuevo",
                ubicacion: "Librería Mágica",
-               fecha_publicacioo: "23 de noviembre de 1883",
+               fechaDePublicacion: "23 de noviembre de 1883",
                editorial: "Alianza",
                paginas:"Varía según la edición, generalmente alrededor de 240 páginas",
                dimensiones: "Depende del formato", 
@@ -347,57 +347,106 @@ let libros=[
        
 
 
-  function agregarlibro(){ 
 
-    newbook={
-     titulo: prompt("titulo"),
-     autor: prompt("autor"),
-     genero: prompt("genero"),
-     idioma: prompt("idioma"),
-     precio: prompt("precio"),
-     formato: prompt("formato"),
-     isbn: prompt("isbn"),
-     descripcion: prompt("descripcion"),
-     estado: prompt("estado"),
-     ubicacion: prompt("ubicacion"),
-     fecha_publicacion: prompt("fecha de publicaion"),
-     editorial: prompt("editorial"),
-     paginas: prompt("paginas"),
-     dimensiones: prompt("dimensiones"), 
-     peso:prompt("peso") 
- };
- libros.push(newbook)
- console.log(libros)
-  } 
 
-  function eliminarlibro(){
-   libros.pop(libros)
-   console.log(libros)
-  }
 
-  function mostrarlibros(){
-    libros.forEach((libros,index) => console.log(libros.titulo+"\n" +(libros.autor)+"\n" +(libros.genero)+"\n" +(libros.idioma)+"\n" +(libros.precio)+"\n" +(libros.formato)+"\n" +(libros.isbn)+"\n" +(libros.descripcion)+"\n" +(libros.estado+"\n" +(libros.ubicacion)+"\n" +(libros.fechaDePublicacion)+"\n" +(libros.editorial)+"\n" +(libros.paginas)+"\n" +(libros.dimensiones)+"\n" )))
+const mostrar=libros.map(libros =>{
+return{
+  titulo: libros.titulo,
+  autor: libros.autor,
+  precio: libros.precio
+}
+})
+console.table(mostrar)
+
+
+const mostrar1=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    autor: libros.autor,
+  
   }
-  function salir(){
+  })
+  console.table(mostrar1)
+  
+const mostrar2=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    descripcion: libros.descripcion,
   }
+  })
+  console.table(mostrar2)
+  
+const mostrar3=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    paginas:libros.paginas,
+    idioma:libros.idioma,
+  }
+  })
+  console.table(mostrar3)
 
   
-do{ 
-  menuLibro="MENU LIBROS\n\n";
-  menuLibro+="1. Agregar libros\n";
-  menuLibro+="2. ¿Quieres eliminar el ultimo libro?\n";
-  menuLibro+="3. Mostrar libros que hay (titulo)\n";
-  menuLibro+="4. Salir\n";
-  mostarlibro=parseInt(prompt(menuLibro))
-  switch(mostarlibro){
-    case 1:agregarlibro()
-    break 
-    case 2:eliminarlibro()
-    break
-    case 3:mostrarlibros()
-    break
-    case 4: salir()
-
+const mostrar4=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    formato: libros.formato,
+    isbn: libros.ISBN,
   }
+  })
+  console.table(mostrar4)
+  
+const mostrar5=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    ubicacion:libros.ubicacion,
+  }
+  })
+  console.table(mostrar5)
+  
+const mostrar6=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    peso: libros.peso,
+    estado: libros.estado
+  }
+  })
+  console.table(mostrar6)
+  
+const mostrar7=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    fechaDePublicacion: libros.fechaDePublicacion
+  }
+  })
+  console.table(mostrar7)
+  
+const mostrar8=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    editorial: libros.editorial,
+    formato: libros.formato
+  }
+  })
+  console.table(mostrar8)
+  
+const mostrar9=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+    autor: libros.autor,
+  
+  }
+  })
+  console.table(mostrar9)
+  
+const mostrar0=libros.map(libros =>{
+  return{
+    titulo: libros.titulo,
+   editorial: libros.editorial,
+   ubicacion:libros.ubicacion,
+    estado: libros.estado,
+  }
+  })
+  console.table(mostrar0)
 
-} while(mostarlibro!==4)
+   
