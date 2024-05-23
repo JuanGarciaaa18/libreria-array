@@ -1,2 +1,58 @@
     <script src="index.js"></script>
     arrays
+
+    
+  function agregarlibro(){ 
+
+    newbook={
+     titulo: prompt("titulo"),
+     autor: prompt("autor"),
+     genero: prompt("genero"),
+     idioma: prompt("idioma"),
+     precio: prompt("precio"),
+     formato: prompt("formato"),
+     isbn: prompt("isbn"),
+     descripcion: prompt("descripcion"),
+     estado: prompt("estado"),
+     ubicacion: prompt("ubicacion"),
+     fecha_publicacion: prompt("fecha de publicaion"),
+     editorial: prompt("editorial"),
+     paginas: prompt("paginas"),
+     dimensiones: prompt("dimensiones"), 
+     peso:prompt("peso") 
+ };
+ libros.push(newbook)
+ console.log(libros)
+  } 
+
+  function eliminarlibro(){
+   libros.pop(libros)
+   console.log(libros)
+  }
+
+  function mostrarlibros(){
+    libros.forEach((libros,index) => console.log(libros.titulo+"\n" +(libros.autor)+"\n" +(libros.genero)+"\n" +(libros.idioma)+"\n" +(libros.precio)+"\n" +(libros.formato)+"\n" +(libros.isbn)+"\n" +(libros.descripcion)+"\n" +(libros.estado+"\n" +(libros.ubicacion)+"\n" +(libros.fechaDePublicacion)+"\n" +(libros.editorial)+"\n" +(libros.paginas)+"\n" +(libros.dimensiones)+"\n" )))
+  }
+  function salir(){
+  }
+
+  
+do{ 
+  menuLibro="MENU LIBROS\n\n";
+  menuLibro+="1. Agregar libros\n";
+  menuLibro+="2. ¿Quieres eliminar el ultimo libro?\n";
+  menuLibro+="3. Mostrar libros que hay (titulo)\n";
+  menuLibro+="4. Salir\n";
+  mostarlibro=parseInt(prompt(menuLibro))
+  switch(mostarlibro){
+    case 1:agregarlibro()
+    break 
+    case 2:eliminarlibro()
+    break
+    case 3:mostrarlibros()
+    break
+    case 4: salir()
+
+  }
+
+} while(mostarlibro!==4)

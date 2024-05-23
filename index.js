@@ -449,4 +449,23 @@ const mostrar0=libros.map(libros =>{
   })
   console.table(mostrar0)
 
-   
+const descuento=libros.map(libros =>{
+  return{
+    ...libros,
+    descuento:"20%"
+  }
+})
+  console.log(descuento)
+
+  
+  const mostrarcondescuento=descuento.map(libros =>{
+    return{
+      titulo: libros.titulo,
+      autor: libros.autor,
+      editorial: libros.editorial,
+      precio: libros.precio,
+      descuento:libros.descuento
+    }
+    })
+
+    console.table(mostrarcondescuento)
