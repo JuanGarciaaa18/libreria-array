@@ -346,119 +346,196 @@ let libros=[
     ];
        
 
+    
+    function agregarlibro(){ 
+
+      newbook={
+       titulo: prompt("titulo"),
+       autor: prompt("autor"),
+       genero: prompt("genero"),
+       idioma: prompt("idioma"),
+       precio: prompt("precio"),
+       formato: prompt("formato"),
+       isbn: prompt("isbn"),
+       descripcion: prompt("descripcion"),
+       estado: prompt("estado"),
+       ubicacion: prompt("ubicacion"),
+       fecha_publicacion: prompt("fecha de publicaion"),
+       editorial: prompt("editorial"),
+       paginas: prompt("paginas"),
+       dimensiones: prompt("dimensiones"), 
+       peso:prompt("peso") 
+   };
+   libros.push(newbook)
+   console.log(libros)
+    } 
+  
+    function eliminarlibro(){
+     libros.pop(libros)
+     console.log(libros)
+    }
+  
+    function mostrarlibros(){
+      libros.forEach((libros,index) => console.log(libros.titulo+"\n" +(libros.autor)+"\n" +(libros.genero)+"\n" +(libros.idioma)+"\n" +(libros.precio)+"\n" +(libros.formato)+"\n" +(libros.isbn)+"\n" +(libros.descripcion)+"\n" +(libros.estado+"\n" +(libros.ubicacion)+"\n" +(libros.fechaDePublicacion)+"\n" +(libros.editorial)+"\n" +(libros.paginas)+"\n" +(libros.dimensiones)+"\n" )))
+    }
+    function salir(){
+    }
+  
+    
+  do{ 
+    menuLibro="MENU LIBROS\n\n";
+    menuLibro+="1. Agregar libros\n";
+    menuLibro+="2. ¿Quieres eliminar el ultimo libro?\n";
+    menuLibro+="3. Mostrar libros que hay (titulo)\n";
+    menuLibro+="4. Listar Libros \n";
+    menuLibro+="5. Salir \n";
+    mostarlibro=parseInt(prompt(menuLibro))
+    switch(mostarlibro){
+      case 1:agregarlibro()
+      break 
+      case 2:eliminarlibro()
+      break
+      case 3:mostrarlibros()
+      break
+      case 4:menu1 = "Lista de libros \n\n"
+      menu1 += "1. Titulo \n"
+      menu1 += "2. Autor \n"
+      menu1 += "3. Descripcion \n"
+      menu1 += "4. paginas \n"
+      menu1 += "5. Formato \n"
+      menu1 += "6. ubicacion \n"
+      menu1 += "7. Peso \n"
+      menu1 += "8. fecha de publicacion \n"
+      menu1 += "9. editorial \n"
+      menu1 += "10. Descripicion \n"
+      menu1 += "11. Descuento \n\n"
+      menu1 += "Elija una opcion"
+      opcion1 = parseInt(prompt(menu1))
+      switch (opcion1) {
+          case 1:
+            const mostrar=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+            }
+            })
+              console.table(mostrar)
+          
+            
+          break
+          case 2:
+            const mostrar1=libros.map(libros =>{
+              return{
+                titulo: libros.titulo,
+                autor: libros.autor,
+              
+              }
+              })
+            console.table(mostrar1)
+          break
+          case 3: 
+          const mostrar2=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              descripcion: libros.descripcion,
+            }
+            })
+            console.table(mostrar2)
+          break
+          case 4:
+  
+          const mostrar3=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              paginas:libros.paginas,
+             
+            }
+            })
+           console.table(mostrar3)
+          break
+          case 5:
+  
+          const mostrar4=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              formato: libros.formato
+            }
+            })
+            console.table(mostrar4)
+          break
+          case 6:
+  
+          const mostrar5=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              ubicacion:libros.ubicacion,
+            }
+            })
+             console.table(mostrar5)
+            
+          break
+          case 7:
+
+          const mostrar6=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              peso: libros.peso,
+           
+            }
+            })
+              console.table(mostrar6)
+          break
+          case 8:
+  
+          const mostrar7=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              fechaDePublicacion: libros.fechaDePublicacion
+            }
+            })
+            console.table(mostrar7)
+          break
+          case 9:
+  
+          const mostrar8=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              editorial: libros.editorial,
+             
+            }
+            })
+            console.table(mostrar8)
+            
+          break
+          case 10:
+ 
+          const mostrar9=libros.map(libros =>{
+            return{
+              titulo: libros.titulo,
+              descripcion: libros.descripcion
+            
+            }
+            })
+          console.table(mostrar9)
+            
+          break
+          case 11:
+          const descuento=libros.map(libros =>{
+            return{
+              ...libros,
+              descuento:"20%"
+            }
+          })
+          break
+
+          case 5: salir()
+    }}
+  
+  } while(mostarlibro!==5)
+  
 
 
 
 
-const mostrar=libros.map(libros =>{
-return{
-  titulo: libros.titulo,
-  autor: libros.autor,
-  precio: libros.precio
-}
-})
-//1 iteracion
-//console.table(mostrar)
-
-
-const mostrar1=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    autor: libros.autor,
-  
-  }
-  })
-  //2 iteracion
-  //console.table(mostrar1)
-  
-const mostrar2=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    descripcion: libros.descripcion,
-  }
-  })
-  //3 iteracion
-   //console.table(mostrar2)
-  
-const mostrar3=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    paginas:libros.paginas,
-    idioma:libros.idioma,
-  }
-  })
-  //4 iteracion
-   //console.table(mostrar3)
-
-  
-const mostrar4=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    formato: libros.formato,
-    isbn: libros.ISBN,
-  }
-  })
-  //5 iteracion
-   //console.table(mostrar4)
-  
-const mostrar5=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    ubicacion:libros.ubicacion,
-  }
-  })
-  //6 iteracion
-  // console.table(mostrar5)
-  
-const mostrar6=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    peso: libros.peso,
-    estado: libros.estado
-  }
-  })
-  //7 iteracion
-   //console.table(mostrar6)
-  
-const mostrar7=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    fechaDePublicacion: libros.fechaDePublicacion
-  }
-  })
-  //8 iteracion
-   //console.table(mostrar7)
-  
-const mostrar8=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    editorial: libros.editorial,
-    formato: libros.formato
-  }
-  })
-  //9 iteracion
-   //console.table(mostrar8)
-  
-const mostrar9=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-    autor: libros.autor,
-  
-  }
-  })
-  //10 iteracion
-   //console.table(mostrar9)
-  
-const mostrar0=libros.map(libros =>{
-  return{
-    titulo: libros.titulo,
-   editorial: libros.editorial,
-   ubicacion:libros.ubicacion,
-    estado: libros.estado,
-  }
-  })
-  //11 iteracion
-  // console.table(mostrar0)
 
 const descuento=libros.map(libros =>{
   return{
