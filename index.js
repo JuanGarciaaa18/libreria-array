@@ -501,11 +501,14 @@ const descuento=libros.map(libros =>{
       return libros.paginas > 500
        })
          .sort((a,b)=>b.paginas-a.paginas)
-         
-          console.table(librosmaspaginasorganizado)
+
+          //console.table(librosmaspaginasorganizado)
 
 
+    const organizarpaginas=libros.sort((a,b)=>b.paginas-a.paginas);
+    //console.table(organizarpaginas)
 
+  
     const librostitulodinero = libros.filter(libros=>{
       return libros.precio > 11
     })
@@ -520,13 +523,44 @@ const descuento=libros.map(libros =>{
     //console.table(librostitulodinero)
 
 
-    const organizarpaginas=libros.sort((a,b)=>b.paginas-a.paginas);
-    //console.table(organizarpaginas)
+    const librostitulomenor100pag = libros.filter(libros=>{
+      return libros.paginas < 101
+    })
+    .map(libros =>{
+      return{
+        titulo: libros.titulo,
+        autor: libros.autor,
+        editorial: libros.editorial,
+        paginas:libros.paginas
+      }
+    })
+
+    //console.table(librostitulomenor100pag)
+
+
+
+    const librosmayor20dol = libros.filter(libros=>{
+      return libros.precio > 20
+    })
+    .map(libros =>{
+      return{
+        titulo: libros.titulo,
+        autor: libros.autor,
+        precio: libros.precio,
+      }
+    })
+    .sort((a,b)=>b.precio-a.precio)
+
+    //console.table(librosmayor20dol)
 
   
+    const librospaginasordenado=libros.map(libros=>{
+      return {
+        titulo: libros.titulo,
+         autor: libros.autor,
+         editorial:libros.editorial,
+        paginas:libros.paginas
+    }})
+         .sort((a,b)=>b.paginas-a.paginas)
 
-
-
-
-
-  
+          //console.table(librospaginasordenado)
