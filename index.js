@@ -4,7 +4,7 @@ let libros=[
            autor: "Antoine de Saint-Exupéry",
            genero: "Ficción",
            idioma: "Español",
-           precio: "Depende del vendedor y la edición",
+           precio: 20,
            formato: "Puede estar disponible en tapa dura, tapa blanda y ebook, entre otros",
            ISBN: "ISBN para la edición en español es: 9788490431604",
            descripcion: "Es una novela corta que narra la historia de un joven príncipe que viaja por diferentes planetas",
@@ -12,7 +12,7 @@ let libros=[
            ubicacion: "Disponible en librerías físicas y tiendas en línea",
            fechadepublicacion: "Originalmente publicado en 1943",
            editorial: "iEditorial Siruela",
-           paginas: "Varía según la edición, generalmente alrededor de 100 páginas",
+           paginas: 100,
            dimensiones: "Alrededor de 13 x 1 x 20 cm (ancho x profundidad x altura) en tapa blanda",
            peso: "Alrededor de 100-200 gramos en tapa blanda",
        },
@@ -22,7 +22,7 @@ let libros=[
                autor: "Gabriel García Márquez",
                genero: "Ficción",
                idioma: "Español",
-               precio: "Depende del vendedor y la edición",
+               precio: 18.5,
                formato: "Disponible en tapa dura, tapa blanda y ebook, entre otros",
                ISBN: " ISBN para la edición en español es: 978-84-376-0494-7",
                descripcion: "Es una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo.",
@@ -30,7 +30,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechadepublicacion: "Originalmente publicado en 1967",
                editorial:"Editorial Sudamericana",
-               paginas: "Varía según la edición, generalmente alrededor de 500 páginas",
+               paginas: 500,
                dimensiones: "Alrededor de 15 x 3 x 23 cm (ancho x profundidad x altura) en tapa blanda",
                peso: "Alrededor de 400-600 gramos en tapa blanda",
            
@@ -41,7 +41,7 @@ let libros=[
              autor: "Miguel de Cervantes",
              genero: "Ficción",
              idioma: "Español",
-             precio: "Variable según la edición y vendedor",
+             precio: 23,
              formato: "Tapa dura, tapa blanda, ebook, entre otros",
              ISBN: "Depende de la edición",
              descripcion: "Una de las obras más importantes de la literatura española, que narra las aventuras de un hidalgo que se cree caballero andante.",
@@ -49,7 +49,7 @@ let libros=[
              ubicacion: "Disponible en librerías físicas y tiendas en línea",
              fechaDePublicacion: "Primera parte publicada en 1605, segunda parte en 1615",
              editorial: "Varias editoriales han publicado ediciones, como Editorial Espasa-Calpe",
-             paginas: "Varía según la edición, generalmente alrededor de 1000 páginas",
+             paginas: 1000,
              dimensiones: "Depende del formato",
              peso: "Depende del formato"
            },
@@ -58,7 +58,7 @@ let libros=[
              autor: "J.K. Rowling",
              genero: "Ficción, Fantasía",
              idioma: "Español",
-             precio: "Variable según la edición y vendedor",
+             precio: 17.85,
              formato: "Tapa dura, tapa blanda, ebook, entre otros",
              ISBN: "Depende de la edición",
              descripcion: "El primer libro de la famosa serie de Harry Potter, que narra las aventuras del joven mago en el Colegio Hogwarts de Magia y Hechicería.",
@@ -66,7 +66,7 @@ let libros=[
              ubicacion: "Disponible en librerías físicas y tiendas en línea",
              fechaDePublicacion: "Originalmente publicado en 1997",
              editorial: "Salamandra",
-             paginas: "Varía según la edición, generalmente alrededor de 300 páginas",
+             paginas: 300,
              dimensiones: "Depende del formato",
              peso: "Depende del formato"
            },
@@ -75,7 +75,7 @@ let libros=[
                autor: "Homero",
                genero: "Poesía épica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 13.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Un poema épico que relata el viaje de Ulises de vuelta a casa después de la Guerra de Troya.",
@@ -83,7 +83,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Antigua, fecha aproximada siglo VIII a.C.",
                editorial: "Varias editoriales han publicado ediciones, como Alianza Editorial",
-               paginas: "Varía según la edición, generalmente alrededor de 400 páginas",
+               paginas: 400,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -92,7 +92,7 @@ let libros=[
                autor: "Herman Melville",
                genero: "Ficción, Novela marítima",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 26.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La historia del capitán Ahab y su obsesión por cazar a la gran ballena blanca, Moby Dick.",
@@ -100,7 +100,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1851",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 600 páginas",
+               paginas: 600,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -109,7 +109,7 @@ let libros=[
                autor: "Fyodor Dostoevsky",
                genero: "Ficción, Novela psicológica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 16,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La historia de un estudiante llamado Raskólnikov que comete un asesinato y enfrenta las consecuencias psicológicas de sus acciones.",
@@ -117,7 +117,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1866",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 600 páginas",
+               paginas: 600,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -126,7 +126,7 @@ let libros=[
                autor: "Julio Cortázar",
                genero: "Ficción, Experimental",
                idioma: "Español",
-               precio: "Variable según la edición y vendedor",
+               precio:  17,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una novela que desafía las convenciones narrativas tradicionales y presenta múltiples formas de lectura.",
@@ -134,7 +134,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1963",
                editorial: "Varias editoriales han publicado ediciones, como Alfaguara",
-               paginas: "Varía según la edición, generalmente alrededor de 600 páginas",
+               paginas: 600,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -143,7 +143,7 @@ let libros=[
                autor: "Victor Hugo",
                genero: "Ficción, Novela histórica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 21.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La historia de Jean Valjean y su lucha por la redención en la Francia del siglo XIX.",
@@ -151,7 +151,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1862",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 1500 páginas",
+               paginas: 1500,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -160,7 +160,7 @@ let libros=[
                autor: "Oscar Wilde",
                genero: "Ficción, Novela gótica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 13,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La historia de un hombre joven cuyo retrato envejece mientras él permanece eternamente joven.",
@@ -168,7 +168,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1890",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 250 páginas",
+               paginas: 250,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -177,7 +177,7 @@ let libros=[
                autor: "J.R.R. Tolkien",
                genero: "Ficción, Fantasía épica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 19.50,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La primera parte de la trilogía épica que sigue la búsqueda del Anillo Único por parte de Frodo Bolsón y su compañía.",
@@ -185,7 +185,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1954",
                editorial: "Varias editoriales han publicado ediciones, como Minotauro",
-               paginas: "Varía según la edición, generalmente alrededor de 500 páginas",
+               paginas: 500,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -194,7 +194,7 @@ let libros=[
                autor: "Franz Kafka",
                genero: "Ficción, Novela corta",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 21.5,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La historia de Gregor Samsa, quien se despierta un día transformado en un insecto gigante.",
@@ -202,7 +202,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1915",
                editorial: "Varias editoriales han publicado ediciones, como Alianza Editorial",
-               paginas: "Varía según la edición, generalmente alrededor de 100 páginas",
+               paginas: 100,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -211,7 +211,7 @@ let libros=[
                autor: "Dante Alighieri",
                genero: "Poesía épica, Alegoría",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 17.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Un poema épico que narra el viaje de Dante a través del Infierno, el Purgatorio y el Paraíso.",
@@ -219,7 +219,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1320",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 700 páginas",
+               paginas: 700,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },       
@@ -228,7 +228,7 @@ let libros=[
                autor: "William Shakespeare",
                genero: "Tragedia, Drama",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 19.5,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una de las tragedias más famosas de Shakespeare, que sigue al príncipe Hamlet en su búsqueda de venganza por la muerte de su padre.",
@@ -236,7 +236,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado entre 1599 y 1602",
                editorial: "Varias editoriales han publicado ediciones, como Penguin Clásicos",
-               paginas: "Varía según la edición, generalmente alrededor de 300 páginas",
+               paginas: 300,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -245,7 +245,7 @@ let libros=[
                autor: "Lev Tolstói",
                genero: "Ficción, Novela histórica",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 24,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una novela monumental que narra las vidas de varias familias aristocráticas rusas durante la invasión napoleónica.",
@@ -253,7 +253,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado entre 1865 y 1869",
                editorial: "Varias editoriales han publicado ediciones, como Debolsillo",
-               paginas: "Varía según la edición, generalmente alrededor de 1500 páginas",
+               paginas: 1500,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -262,7 +262,7 @@ let libros=[
                autor: "Ray Bradbury",
                genero: "Ficción, Distopía",
                idioma: "Español (traducción)",
-               precio: "Variable según la edición y vendedor",
+               precio: 14,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una novela que presenta una sociedad futurista donde los libros están prohibidos y son quemados por bomberos.",
@@ -270,7 +270,7 @@ let libros=[
                ubicacion: "Disponible en librerías físicas y tiendas en línea",
                fechaDePublicacion: "Originalmente publicado en 1953",
                editorial:  "Alianza",
-               paginas: "Varía según la edición, generalmente alrededor de 250 páginas",
+               paginas:250,
                dimensiones: "Depende del formato",
                peso: "Depende del formato"
              },
@@ -279,7 +279,7 @@ let libros=[
                autor: "C.S. Lewis",
                genero: "Fantasía",
                idioma: "Español",
-               precio: "Variable según la edición y vendedor",
+               precio: 13.75,
                formato: "Tapa blanda",
                ISBN: "9780007115617",
                descripcion: "Cuatro niños descubren un mundo mágico detrás de un armario en una casa de campo.",
@@ -297,7 +297,7 @@ let libros=[
                autor: "Jane Austen",
                genero: "Novela romántica",
                idioma: "Español",
-               precio: "Variable según la edición y vendedor",
+               precio: 14.15,
                formato: "Tapa blanda",
                ISBN: "9788491040541",
                descripcion: "La compleja historia de amor entre Elizabeth Bennet y Mr. Darcy en la Inglaterra del siglo XIX.",
@@ -305,7 +305,7 @@ let libros=[
                ubicacion: "Librería Austen",
                fechaDePublicacion: "28 de enero de 1813",
                editorial:  "Alianza",
-               paginas:"Varía según la edición, generalmente alrededor de 420 páginas",
+               paginas:420,
                dimensiones: "Depende del formato", 
                peso:  "Depende del formato"
             },
@@ -314,7 +314,7 @@ let libros=[
                autor: "Jules Verne",
                genero: "Novela",
                idioma: "Español",
-               precio: "Variable según la edición y vendedor",
+               precio: 12.25,
                formato: "Tapa dura",
                ISBN: "9788499084565",
                descripcion: "La historia de un viaje en un submarino a través de los mares del mundo.",
@@ -322,7 +322,7 @@ let libros=[
                ubicacion: "Librería Mágica",
                fechaDePublicacion: "20 de marzo de 1870",
                editorial: "Alianza",
-               paginas: "Varía según la edición, generalmente alrededor de 240 páginas",
+               paginas: 240,
                dimensiones:"Depende del formato", 
                peso: "Depende del formato"
             },
@@ -331,7 +331,7 @@ let libros=[
                autor: "Robert Louis Stevenson",
                genero: "Aventuras",
                idioma: "Español",
-               precio: "Variable según la edición y vendedor",
+               precio: 14.5,
                formato: "Tapa blanda",
                isbn: "9788466655522",
                descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa.",
@@ -339,7 +339,7 @@ let libros=[
                ubicacion: "Librería Mágica",
                fechaDePublicacion: "23 de noviembre de 1883",
                editorial: "Alianza",
-               paginas:"Varía según la edición, generalmente alrededor de 240 páginas",
+               paginas:240,
                dimensiones: "Depende del formato", 
                peso:  "Depende del formato"
                },
@@ -357,7 +357,8 @@ return{
   precio: libros.precio
 }
 })
-console.table(mostrar)
+//1 iteracion
+//console.table(mostrar)
 
 
 const mostrar1=libros.map(libros =>{
@@ -367,7 +368,8 @@ const mostrar1=libros.map(libros =>{
   
   }
   })
-  console.table(mostrar1)
+  //2 iteracion
+  //console.table(mostrar1)
   
 const mostrar2=libros.map(libros =>{
   return{
@@ -375,7 +377,8 @@ const mostrar2=libros.map(libros =>{
     descripcion: libros.descripcion,
   }
   })
-  console.table(mostrar2)
+  //3 iteracion
+   //console.table(mostrar2)
   
 const mostrar3=libros.map(libros =>{
   return{
@@ -384,7 +387,8 @@ const mostrar3=libros.map(libros =>{
     idioma:libros.idioma,
   }
   })
-  console.table(mostrar3)
+  //4 iteracion
+   //console.table(mostrar3)
 
   
 const mostrar4=libros.map(libros =>{
@@ -394,7 +398,8 @@ const mostrar4=libros.map(libros =>{
     isbn: libros.ISBN,
   }
   })
-  console.table(mostrar4)
+  //5 iteracion
+   //console.table(mostrar4)
   
 const mostrar5=libros.map(libros =>{
   return{
@@ -402,7 +407,8 @@ const mostrar5=libros.map(libros =>{
     ubicacion:libros.ubicacion,
   }
   })
-  console.table(mostrar5)
+  //6 iteracion
+  // console.table(mostrar5)
   
 const mostrar6=libros.map(libros =>{
   return{
@@ -411,7 +417,8 @@ const mostrar6=libros.map(libros =>{
     estado: libros.estado
   }
   })
-  console.table(mostrar6)
+  //7 iteracion
+   //console.table(mostrar6)
   
 const mostrar7=libros.map(libros =>{
   return{
@@ -419,7 +426,8 @@ const mostrar7=libros.map(libros =>{
     fechaDePublicacion: libros.fechaDePublicacion
   }
   })
-  console.table(mostrar7)
+  //8 iteracion
+   //console.table(mostrar7)
   
 const mostrar8=libros.map(libros =>{
   return{
@@ -428,7 +436,8 @@ const mostrar8=libros.map(libros =>{
     formato: libros.formato
   }
   })
-  console.table(mostrar8)
+  //9 iteracion
+   //console.table(mostrar8)
   
 const mostrar9=libros.map(libros =>{
   return{
@@ -437,7 +446,8 @@ const mostrar9=libros.map(libros =>{
   
   }
   })
-  console.table(mostrar9)
+  //10 iteracion
+   //console.table(mostrar9)
   
 const mostrar0=libros.map(libros =>{
   return{
@@ -447,7 +457,8 @@ const mostrar0=libros.map(libros =>{
     estado: libros.estado,
   }
   })
-  console.table(mostrar0)
+  //11 iteracion
+  // console.table(mostrar0)
 
 const descuento=libros.map(libros =>{
   return{
@@ -455,7 +466,8 @@ const descuento=libros.map(libros =>{
     descuento:"20%"
   }
 })
-  console.log(descuento)
+// agregar descuento con spreed
+ //console.log(descuento)
 
   
   const mostrarcondescuento=descuento.map(libros =>{
@@ -468,4 +480,29 @@ const descuento=libros.map(libros =>{
     }
     })
 
-    console.table(mostrarcondescuento)
+    //Mostrar una iteracion con el descuento
+    //console.table(mostrarcondescuento)
+
+    
+    const librosmayora50 = libros.filter(libros=>{
+      return libros.precio > 50
+    })
+
+    //Mostrar libros que su valor sea mayor a 50
+    //console.table(librosmayora50)
+
+    const librosmaspaginasorganizado=libros.map(libros=>{
+      return {
+        titulo: libros.titulo,
+         autor: libros.autor,
+         editorial:libros.editorial,
+        paginas:libros.paginas
+    }})
+    .sort((a,b )=> b.paginas-a.paginas);
+
+    //Mostrar libros organizados por paginas de mayor a menor por titulo, autor,editorial,paginas
+    //console.table(librosmaspaginasorganizado)
+  
+
+
+
