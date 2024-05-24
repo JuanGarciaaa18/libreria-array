@@ -487,8 +487,6 @@ const descuento=libros.map(libros =>{
     const librosmayora50 = libros.filter(libros=>{
       return libros.precio > 50
     })
-
-    //Mostrar libros que su valor sea mayor a 50
     //console.table(librosmayora50)
 
     const librosmaspaginasorganizado=libros.map(libros=>{
@@ -500,9 +498,30 @@ const descuento=libros.map(libros =>{
     }})
     .sort((a,b )=> b.paginas-a.paginas);
 
-    //Mostrar libros organizados por paginas de mayor a menor por titulo, autor,editorial,paginas
-    //console.table(librosmaspaginasorganizado)
+    console.table(librosmaspaginasorganizado)
+
+
+    const librostitulodinero = libros.filter(libros=>{
+      return libros.precio > 11
+    })
+    .map(libros =>{
+      return{
+        titulo: libros.titulo,
+        autor: libros.autor,
+        precio: libros.precio
+      }
+    })
+
+    //  console.table(librostitulodinero)
+
+
+    const organizarpaginas=libros.sort((a,b)=>b.paginas-a.paginas);
+    console.table(organizarpaginas)
+
   
 
 
 
+
+
+  
