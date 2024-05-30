@@ -177,7 +177,7 @@ let libros=[
                autor: "J.R.R. Tolkien",
                genero: "Ficción, Fantasía épica",
                idioma: "Español (traducción)",
-               precio: 19.50,
+               precio: 72.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "La primera parte de la trilogía épica que sigue la búsqueda del Anillo Único por parte de Frodo Bolsón y su compañía.",
@@ -228,7 +228,7 @@ let libros=[
                autor: "William Shakespeare",
                genero: "Tragedia, Drama",
                idioma: "Español (traducción)",
-               precio: 19.5,
+               precio: 51.25,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una de las tragedias más famosas de Shakespeare, que sigue al príncipe Hamlet en su búsqueda de venganza por la muerte de su padre.",
@@ -262,7 +262,7 @@ let libros=[
                autor: "Ray Bradbury",
                genero: "Ficción, Distopía",
                idioma: "Español (traducción)",
-               precio: 14,
+               precio: 62.50,
                formato: "Tapa dura, tapa blanda, ebook, entre otros",
                ISBN: "Depende de la edición",
                descripcion: "Una novela que presenta una sociedad futurista donde los libros están prohibidos y son quemados por bomberos.",
@@ -545,7 +545,7 @@ let libros=[
       break
           case 5: menu3 = "Lista de libros organizados \n\n"
           menu3 += "1. libros mayor a 50 dolares \n"
-          menu3 += "2. libros con más paginas organizado \n"
+          menu3 += "2. libros con más paginas \n"
           menu3 += "3. libros organizados por paginas de mayor a menor \n"
           menu3 += "4. Titulo de libros menores a 11 dolares \n"
           menu3 += "5. libros con menos o igual de 100 paginas \n"
@@ -570,7 +570,6 @@ let libros=[
                   .filter(libros=>{
                   return libros.paginas > 500
                    })
-                     .sort((a,b)=>b.paginas-a.paginas)
             
                       console.table(librosmaspaginasorganizado)
                 
@@ -648,17 +647,3 @@ let libros=[
 }
   
   } while(mostarlibro!==6)
-  
-
-
-
-   
-
-
-
-
-
-
-
-
-  
