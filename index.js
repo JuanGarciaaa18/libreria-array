@@ -417,6 +417,9 @@ let libros=[
             const mostrar=libros.map(libros =>{
             return{
               titulo: libros.titulo,
+              Autor:libros.autor,
+              editorial: libros.editorial,
+              precio:libros.precio
             }
             })
               console.table(mostrar)
