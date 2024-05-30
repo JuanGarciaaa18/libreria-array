@@ -388,7 +388,8 @@ let libros=[
     menuLibro+="2. ¿Quieres eliminar el ultimo libro?\n";
     menuLibro+="3. Mostrar libros que hay (titulo)\n";
     menuLibro+="4. Listar Libros \n";
-    menuLibro+="5. Salir \n";
+    menuLibro+="5. Buscar libros organizados \n";
+    menuLibro+="6. Salir \n";
     mostarlibro=parseInt(prompt(menuLibro))
     switch(mostarlibro){
       case 1:agregarlibro()
@@ -397,20 +398,20 @@ let libros=[
       break
       case 3:mostrarlibros()
       break
-      case 4:menu1 = "Lista de libros \n\n"
-      menu1 += "1. Titulo \n"
-      menu1 += "2. Autor \n"
-      menu1 += "3. Descripcion \n"
-      menu1 += "4. paginas \n"
-      menu1 += "5. Formato \n"
-      menu1 += "6. ubicacion \n"
-      menu1 += "7. Peso \n"
-      menu1 += "8. fecha de publicacion \n"
-      menu1 += "9. editorial \n"
-      menu1 += "10. Descripicion \n"
-      menu1 += "11. Descuento \n\n"
-      menu1 += "Elija una opcion"
-      opcion1 = parseInt(prompt(menu1))
+      case 4:menu3 = "Lista de libros \n\n"
+      menu3 += "1. Titulo \n"
+      menu3 += "2. Autor \n"
+      menu3 += "3. Descripcion \n"
+      menu3 += "4. paginas \n"
+      menu3 += "5. Formato \n"
+      menu3 += "6. ubicacion \n"
+      menu3 += "7. Peso \n"
+      menu3 += "8. fecha de publicacion \n"
+      menu3 += "9. editorial \n"
+      menu3 += "10. Descripicion \n"
+      menu3 += "11. Descuento \n\n"
+      menu3 += "Elija una opcion"
+      opcion1 = parseInt(prompt(menu3))
       switch (opcion1) {
           case 1:
             const mostrar=libros.map(libros =>{
@@ -519,125 +520,142 @@ let libros=[
             
           break
           case 11:
-          const descuento=libros.map(libros =>{
-            return{
-              ...libros,
-              descuento:"20%"
-            }
-          })
-          break
+            let descuento = libros.map(libros => {
+                return {
+                    ...libros,
+                    descuento: "20%"
+                }
+            })
 
-          case 5: salir()
-    }}
+            let mostrardescuento = descuento.map(libros => {
+                return {
+                    titulo: libros.titulo,
+                    autor: libros.autor,
+                    editorial: libros.editorial,
+                    precio: libros.precio,
+                    descuento: libros.descuento
+                }
+            })
+            console.table(mostrardescuento)
+            break;
+        }
+      break
+          case 5: menu3 = "Lista de libros organizados \n\n"
+          menu3 += "1. libros mayor a 50 dolares \n"
+          menu3 += "2. libros con más paginas organizado \n"
+          menu3 += "3. libros organizados por paginas de mayor a menor \n"
+          menu3 += "4. Titulo de libros menores a 11 dolares \n"
+          menu3 += "5. libros con menos o igual de 100 paginas \n"
+          menu3 += "6. libros mayor a 20 dolares  \n"
+          menu3 += "7. Libros por titulo, autor, editorial, paginas ordenados de mayor a menor. \n"
+          opcion3 = parseInt(prompt(menu3))
+          switch (opcion3) {
+              case 1: 
+              const librosmayora50 = libros.filter(libros=>{
+                return libros.precio > 50
+              })
+              console.table(librosmayora50)
+              break
+              case 2:
+                const librosmaspaginasorganizado=libros.map(libros=>{
+                  return {
+                    titulo: libros.titulo,
+                     autor: libros.autor,
+                     editorial:libros.editorial,
+                    paginas:libros.paginas
+                }})
+                  .filter(libros=>{
+                  return libros.paginas > 500
+                   })
+                     .sort((a,b)=>b.paginas-a.paginas)
+            
+                      console.table(librosmaspaginasorganizado)
+                
+              break
+              case 3:
+                const organizarpaginas=libros.sort((a,b)=>b.paginas-a.paginas);
+                console.table(organizarpaginas)
+              break
+              case 4:
   
-  } while(mostarlibro!==5)
-  
-
-
-
-
-
-const descuento=libros.map(libros =>{
-  return{
-    ...libros,
-    descuento:"20%"
-  }
-})
-// agregar descuento con spreed
- //console.log(descuento)
-
-  
-  const mostrarcondescuento=descuento.map(libros =>{
-    return{
-      titulo: libros.titulo,
-      autor: libros.autor,
-      editorial: libros.editorial,
-      precio: libros.precio,
-      descuento:libros.descuento
+              const librostitulodinero = libros.filter(libros=>{
+                return libros.precio > 11
+              })
+              .map(libros =>{
+                return{
+                  titulo: libros.titulo,
+                  autor: libros.autor,
+                  precio: libros.precio
+                }
+              })
+          
+              console.table(librostitulodinero)
+          
+              break
+              case 5:
+                const librostitulomenor100pag = libros.filter(libros=>{
+                  return libros.paginas < 101
+                })
+                .map(libros =>{
+                  return{
+                    titulo: libros.titulo,
+                    autor: libros.autor,
+                    editorial: libros.editorial,
+                    paginas:libros.paginas
+                  }
+                })
+            
+                console.table(librostitulomenor100pag)
+              break
+              case 6:
+                const librosmayor20dol = libros.filter(libros=>{
+                  return libros.precio > 20
+                })
+                .map(libros =>{
+                  return{
+                    titulo: libros.titulo,
+                    autor: libros.autor,
+                    precio: libros.precio,
+                  }
+                })
+                .sort((a,b)=>b.precio-a.precio)
+            
+                console.table(librosmayor20dol)
+            
+              break
+              case 7:
+                const librospaginasordenado=libros.map(libros=>{
+                  return {
+                    titulo: libros.titulo,
+                     autor: libros.autor,
+                     editorial:libros.editorial,
+                    paginas:libros.paginas
+                }})
+                     .sort((a,b)=>b.paginas-a.paginas)
+            
+                      console.table(librospaginasordenado)
+            
+              break
+              case 8:salir()
+                break
     }
-    })
-
-    //Mostrar una iteracion con el descuento
-    //console.table(mostrarcondescuento)
-
+  
+        case 6:salir ()
     
-    const librosmayora50 = libros.filter(libros=>{
-      return libros.precio > 50
-    })
-    //console.table(librosmayora50)
+}
+  
+  } while(mostarlibro!==6)
+  
 
 
-    const librosmaspaginasorganizado=libros.map(libros=>{
-      return {
-        titulo: libros.titulo,
-         autor: libros.autor,
-         editorial:libros.editorial,
-        paginas:libros.paginas
-    }})
-      .filter(libros=>{
-      return libros.paginas > 500
-       })
-         .sort((a,b)=>b.paginas-a.paginas)
 
-          //console.table(librosmaspaginasorganizado)
+   
 
 
-    const organizarpaginas=libros.sort((a,b)=>b.paginas-a.paginas);
-    //console.table(organizarpaginas)
+
+
+
+
+
 
   
-    const librostitulodinero = libros.filter(libros=>{
-      return libros.precio > 11
-    })
-    .map(libros =>{
-      return{
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.precio
-      }
-    })
-
-    //console.table(librostitulodinero)
-
-
-    const librostitulomenor100pag = libros.filter(libros=>{
-      return libros.paginas < 101
-    })
-    .map(libros =>{
-      return{
-        titulo: libros.titulo,
-        autor: libros.autor,
-        editorial: libros.editorial,
-        paginas:libros.paginas
-      }
-    })
-
-    //console.table(librostitulomenor100pag)
-
-
-
-    const librosmayor20dol = libros.filter(libros=>{
-      return libros.precio > 20
-    })
-    .map(libros =>{
-      return{
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.precio,
-      }
-    })
-    .sort((a,b)=>b.precio-a.precio)
-
-    //console.table(librosmayor20dol)
-
-  
-    const librospaginasordenado=libros.map(libros=>{
-      return {
-        titulo: libros.titulo,
-         autor: libros.autor,
-         editorial:libros.editorial,
-        paginas:libros.paginas
-    }})
-         .sort((a,b)=>b.paginas-a.paginas)
-
-          //console.table(librospaginasordenado)
