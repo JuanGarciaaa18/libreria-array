@@ -333,7 +333,7 @@ let libros=[
                idioma: "Español",
                precio: 14.5,
                formato: "Tapa blanda",
-               isbn: "9788466655522",
+               ISBN: "9788466655522",
                descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa.",
                estado: "Nuevo",
                ubicacion: "Librería Mágica",
@@ -344,8 +344,8 @@ let libros=[
                peso:  "Depende del formato"
                },
     ];
-       
 
+        
     
     function agregarlibro(){ 
 
@@ -388,8 +388,9 @@ let libros=[
     menuLibro+="2. ¿Quieres eliminar el ultimo libro?\n";
     menuLibro+="3. Mostrar libros que hay (titulo)\n";
     menuLibro+="4. Listar Libros \n";
-    menuLibro+="5. Buscar libros organizados \n";
-    menuLibro+="6. Salir \n";
+    menuLibro+="5. Libros resumidos \n";
+    menuLibro+="6. Buscar libros \n";
+    menuLibro+="7. Salir \n";
     mostarlibro=parseInt(prompt(menuLibro))
     switch(mostarlibro){
       case 1:agregarlibro()
@@ -641,9 +642,209 @@ let libros=[
               case 8:salir()
                 break
     }
-  
-        case 6:salir ()
+break
+    
+        case 6:menu4 = "Lista de libros \n\n"
+        menu4 += "1.Buscar libro por Titulo\n"
+        menu4 += "2.Buscar libro por autor\n"
+        menu4 += "3.Buscar libro por fecha de publicacion\n"
+        menu4 += "4.Buscar libro por genero\n"
+        menu4 += "5.Buscar libro por idioma\n"
+        menu4 += "6.Buscar libro por precio\n"
+        menu4 += "7.Buscar libro por formato\n"
+        menu4 += "8.Buscar libro por ISBN\n"
+        menu4 += "9.Buscar libro por descripcion\n"
+        menu4 += "10.Buscar libro por estado\n"
+        menu4 += "11.Buscar libro por ubicacion\n"
+        menu4 += "12.Buscar libro por editorial\n"
+        menu4 += "13.Buscar libro por paginas\n"
+        menu4 += "14.Buscar libro por peso\n"
+        menu4 += "15.Buscar libro por dimensiones\n"
+        opcion2 = parseInt(prompt(menu4))
+        switch (opcion2) {
+            case 1:buscarlibrotitulo()
+            break
+            case 2: buscarlibroautor()
+            break
+            case 3: buscarlibrofechapublicacion()
+            break
+            case 4: buscarlibrogenero()
+            break
+            case 5: buscarlibroidioma()
+            break
+            case 6: buscarlibroprecio()
+            break
+            case 7: buscarlibroformato()
+            break 
+            case 8: buscarlibroisbn()
+            break
+            case 9: buscarlibrodescripcion()
+            break
+            case 10: buscarlibroestado()
+            break
+            case 11: buscarlibroubicacion()
+            break
+            case 12: buscarlibroeditorial()
+            break
+            case 13: buscarlibropaginas()
+            break
+            case 14: buscarlibropeso()
+            break
+            case 15: buscarlibrodimensiones()
+            break
+        }
+            case 7: salir()
     
 }
   
-  } while(mostarlibro!==6)
+  } while(mostarlibro!==7)
+
+
+    
+    function buscarlibrotitulo(){
+      librobuscar= prompt("ingrese el titulo del libro");
+      let algunlibro = libros.find((libro) => {
+        return libro.titulo == librobuscar;
+      });
+      console.table(algunlibro);  
+    
+    }
+
+    function buscarlibroautor(){
+      librobuscar1= prompt("ingrese el autor del libro");
+      let algunlibro1 = libros.find((libro) => {
+        return libro.autor == librobuscar1;
+      });
+      console.table(algunlibro1);  
+    
+    }
+
+    
+    function buscarlibrofechapublicacion(){
+      librobuscar2= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro2 = libros.find((libro) => {
+        return libro.fechaDePublicacion == librobuscar2;
+      });
+      console.table(algunlibro2);  
+    
+    }
+
+    function buscarlibrogenero(){
+      librobuscar3= prompt("ingrese el genero del libro");
+      let algunlibro3 = libros.find((libro) => {
+        return libro.genero== librobuscar3;
+      });
+      console.table(algunlibro3);  
+    
+    }
+
+    function buscarlibroidioma(){
+      librobuscar4= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro4 = libros.find((libro) => {
+        return libro.idioma == librobuscar4;
+      });
+      console.table(algunlibro4);  
+    
+    }
+
+    
+    function buscarlibroprecio(){
+      librobuscar5= parseInt(prompt("ingrese la fecha de publicacion del libro"));
+      let algunlibro5 = libros.find((libro) => {
+        return libro.precio == librobuscar5;
+      });
+      console.table(algunlibro5);  
+    
+    }
+
+    function buscarlibroformato(){
+      librobuscar6= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro6 = libros.find((libro) => {
+        return libro.formato == librobuscar6;
+      });
+      console.table(algunlibro6);  
+    
+    }
+
+    function buscarlibroisbn(){
+      librobuscar7= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro7 = libros.find((libro) => {
+        return libro.ISBN == librobuscar7;
+      });
+      console.table(algunlibro7);  
+    
+    }
+
+    function buscarlibrodescripcion(){
+      librobuscar8= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro8 = libros.find((libro) => {
+        return libro.descripcion == librobuscar8;
+      });
+      console.table(algunlibro8);  
+    
+    }
+
+
+    function buscarlibroestado(){
+      librobuscar9= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro9 = libros.find((libro) => {
+        return libro.estado == librobuscar9;
+      });
+      console.table(algunlibro9);  
+    
+    }
+
+  
+    function buscarlibroubicacion(){
+      librobuscar10= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro10= libros.find((libro) => {
+        return libro.ubicacion == librobuscar10;
+      });
+      console.table(algunlibro10);  
+    
+    }
+
+        
+    
+    function buscarlibroeditorial(){
+      librobuscar11= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro11 = libros.find((libro) => {
+        return libro.editorial == librobuscar11;
+      });
+      console.table(algunlibro11);  
+    
+    }
+
+        
+    
+    function buscarlibropaginas(){
+      librobuscar12= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro12= libros.find((libro) => {
+        return libro.paginas == librobuscar12;
+      });
+      console.table(algunlibro12);  
+    
+    }
+
+        
+    function buscarlibropeso(){
+      librobuscar13= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro13 = libros.find((libro) => {
+        return libro.peso == librobuscar13;
+      });
+      console.table(algunlibro13);  
+    
+    }
+
+        
+    
+    function buscarlibrodimensiones(){
+      librobuscar14= prompt("ingrese la fecha de publicacion del libro");
+      let algunlibro14 = libros.find((libro) => {
+        return libro.dimensiones== librobuscar14;
+      });
+      console.table(algunlibro14);  
+    
+    }
+
+        
