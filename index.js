@@ -282,7 +282,7 @@ let libros=[
                precio: 13.75,
                formato: "Tapa blanda",
                ISBN: "9780007115617",
-               descripcion: "Cuatro niños descubren un mundo mágico detrás de un armario en una casa de campo.",
+               descripcion: " ",
                estado: "Nuevo",
                ubicacion: "Librería Lewis",
                fechaDePublicacion: "16 de octubre de 1950",
@@ -310,7 +310,7 @@ let libros=[
                peso:  "Depende del formato"
             },
             {
-               titulo: "Veinte mil leguas de viaje submarino",
+               titulo: "La Isla del Tesoro",
                autor: "Jules Verne",
                genero: "Novela",
                idioma: "Español",
@@ -334,9 +334,9 @@ let libros=[
                precio: 14.5,
                formato: "Tapa blanda",
                ISBN: "9788466655522",
-               descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa.",
+               descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa",
                estado: "Nuevo",
-               ubicacion: "Librería Mágica",
+               ubicacion: "Libreria Magica",
                fechaDePublicacion: "23 de noviembre de 1883",
                editorial: "Alianza",
                paginas:240,
@@ -356,7 +356,7 @@ let libros=[
        idioma: prompt("idioma"),
        precio: prompt("precio"),
        formato: prompt("formato"),
-       isbn: prompt("isbn"),
+       ISBN: prompt("ISBN"),
        descripcion: prompt("descripcion"),
        estado: prompt("estado"),
        ubicacion: prompt("ubicacion"),
@@ -376,7 +376,7 @@ let libros=[
     }
   
     function mostrarlibros(){
-      libros.forEach((libros,index) => console.log(libros.titulo+"\n" +(libros.autor)+"\n" +(libros.genero)+"\n" +(libros.idioma)+"\n" +(libros.precio)+"\n" +(libros.formato)+"\n" +(libros.isbn)+"\n" +(libros.descripcion)+"\n" +(libros.estado+"\n" +(libros.ubicacion)+"\n" +(libros.fechaDePublicacion)+"\n" +(libros.editorial)+"\n" +(libros.paginas)+"\n" +(libros.dimensiones)+"\n" )))
+      libros.forEach((libros,index) => console.log(libros.titulo+"\n" +(libros.autor)+"\n" +(libros.genero)+"\n" +(libros.idioma)+"\n" +(libros.precio)+"\n" +(libros.formato)+"\n" +(libros.ISBN)+"\n" +(libros.descripcion)+"\n" +(libros.estado+"\n" +(libros.ubicacion)+"\n" +(libros.fechaDePublicacion)+"\n" +(libros.editorial)+"\n" +(libros.paginas)+"\n" +(libros.dimensiones)+"\n" )))
     }
     function salir(){
     }
@@ -402,7 +402,7 @@ let libros=[
       case 4:menu3 = "Lista de libros \n\n"
       menu3 += "1. Titulo \n"
       menu3 += "2. Autor \n"
-      menu3 += "3. Descripcion \n"
+      menu3 += "3. descripcion \n"
       menu3 += "4. paginas \n"
       menu3 += "5. Formato \n"
       menu3 += "6. ubicacion \n"
@@ -676,7 +676,7 @@ break
             break
             case 7: buscarlibroformato()
             break 
-            case 8: buscarlibroisbn()
+            case 8: buscarlibroISBN()
             break
             case 9: buscarlibrodescripcion()
             break
@@ -703,8 +703,8 @@ break
     
     function buscarlibrotitulo(){
       librobuscar= prompt("ingrese el titulo del libro");
-      let algunlibro = libros.find((libro) => {
-        return libro.titulo == librobuscar;
+      let algunlibro = libros.find((libros) => {
+        return libros.titulo === librobuscar;
       });
       console.table(algunlibro);  
     
@@ -739,7 +739,7 @@ break
     }
 
     function buscarlibroidioma(){
-      librobuscar4= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar4= prompt("ingrese el idioma del libro");
       let algunlibro4 = libros.find((libro) => {
         return libro.idioma == librobuscar4;
       });
@@ -749,7 +749,7 @@ break
 
     
     function buscarlibroprecio(){
-      librobuscar5= parseInt(prompt("ingrese la fecha de publicacion del libro"));
+      librobuscar5= parseInt(prompt("ingrese el precio del libro"));
       let algunlibro5 = libros.find((libro) => {
         return libro.precio == librobuscar5;
       });
@@ -758,7 +758,7 @@ break
     }
 
     function buscarlibroformato(){
-      librobuscar6= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar6= prompt("ingrese el formato del libro");
       let algunlibro6 = libros.find((libro) => {
         return libro.formato == librobuscar6;
       });
@@ -766,8 +766,8 @@ break
     
     }
 
-    function buscarlibroisbn(){
-      librobuscar7= prompt("ingrese la fecha de publicacion del libro");
+    function buscarlibroISBN(){
+      librobuscar7= prompt("ingrese el ISBN del libro");
       let algunlibro7 = libros.find((libro) => {
         return libro.ISBN == librobuscar7;
       });
@@ -776,7 +776,7 @@ break
     }
 
     function buscarlibrodescripcion(){
-      librobuscar8= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar8= prompt("ingrese la descripcion del libro");
       let algunlibro8 = libros.find((libro) => {
         return libro.descripcion == librobuscar8;
       });
@@ -786,7 +786,7 @@ break
 
 
     function buscarlibroestado(){
-      librobuscar9= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar9= prompt("ingrese el estado del libro");
       let algunlibro9 = libros.find((libro) => {
         return libro.estado == librobuscar9;
       });
@@ -796,7 +796,7 @@ break
 
   
     function buscarlibroubicacion(){
-      librobuscar10= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar10= prompt("ingrese la ubicacion del libro");
       let algunlibro10= libros.find((libro) => {
         return libro.ubicacion == librobuscar10;
       });
@@ -807,7 +807,7 @@ break
         
     
     function buscarlibroeditorial(){
-      librobuscar11= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar11= prompt("ingrese el editorial del libro");
       let algunlibro11 = libros.find((libro) => {
         return libro.editorial == librobuscar11;
       });
@@ -818,7 +818,7 @@ break
         
     
     function buscarlibropaginas(){
-      librobuscar12= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar12= prompt("ingrese las paginas del libro");
       let algunlibro12= libros.find((libro) => {
         return libro.paginas == librobuscar12;
       });
@@ -828,7 +828,7 @@ break
 
         
     function buscarlibropeso(){
-      librobuscar13= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar13= prompt("ingrese el peso del libro");
       let algunlibro13 = libros.find((libro) => {
         return libro.peso == librobuscar13;
       });
@@ -839,7 +839,7 @@ break
         
     
     function buscarlibrodimensiones(){
-      librobuscar14= prompt("ingrese la fecha de publicacion del libro");
+      librobuscar14= prompt("ingrese la dimensiones del libro");
       let algunlibro14 = libros.find((libro) => {
         return libro.dimensiones== librobuscar14;
       });
